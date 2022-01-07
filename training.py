@@ -20,13 +20,22 @@ model_path = os.path.join(config['output_model_path'])
 def train_model():
     
     #use this logistic regression for training
-    LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
-                    intercept_scaling=1, l1_ratio=None, max_iter=100,
-                    multi_class='warn', n_jobs=None, penalty='l2',
-                    random_state=0, solver='liblinear', tol=0.0001, verbose=0,
-                    warm_start=False)
+    logit = LogisticRegression(C=1.0, class_weight=None, dual=False, 
+                               fit_intercept=True, intercept_scaling=1, l1_ratio=None, 
+                               max_iter=100,multi_class='auto', n_jobs=None, 
+                               penalty='l2',random_state=0, solver='liblinear', 
+                               tol=0.0001, verbose=0,warm_start=False)
+    data_df  = pd.read_csv(dataset_csv_path + "/" + "finaldata.csv")
     
-    #fit the logistic regression to your data
-    
-    #write the trained model to your workspace in a file called trainedmodel.pkl
+    X=data_df.loc[:,['lastmonth_activity','lastyear_activity','number_of_employees']].values.reshape(-1, 3)
+    y=data_df['exited'].values.reshape(-1, 1).ravel()
+    # y=data_df['exited'].values.reshape(-1, 1).ravel()
+    # data_df = pd.get_dummies(data_df.corporation, prefix="company")
 
+    # print(data_df)
+    # X=data_df[:-1].values.reshape(-1, 1)
+    # print(X)
+    #fit the logistic regression to your data
+    model = logit.fit(X, y)
+    #write the trained model to your workspace in a file called trainedmodel.pkl
+    pickle.dump(model, open(model_path + "/" + "trainedmodel.pkl", 'wb'))

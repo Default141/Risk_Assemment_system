@@ -25,7 +25,7 @@ def merge_multiple_dataframe():
         # print("./" + input_folder_path + "/" + file)
         currentdf = pd.read_csv("./" + input_folder_path + "/" + file)
         data_df = data_df.append(currentdf)
-    data_df.to_csv("finaldata.csv")
+    data_df.to_csv("./" + output_folder_path + "/" + "finaldata.csv")
     f = open("./" + output_folder_path + "/" + "ingestedfiles.txt", "a")
     f.write(str(filenlist))
     f.close()
