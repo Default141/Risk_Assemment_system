@@ -26,7 +26,4 @@ def store_model_into_pickle():
     copyfile(model_path + "/" + "trainedmodel.pkl", prod_deployment_path + "/" + "trainedmodel.pkl")    
     copyfile(model_path + "/" + "latestscore.txt", prod_deployment_path + "/" + "latestscore.txt")    
     copyfile(dataset_csv_path + "/" + "ingestedfiles.txt", prod_deployment_path + "/" + "ingestedfiles.txt")    
-        
-
-store_model_into_pickle()       
 

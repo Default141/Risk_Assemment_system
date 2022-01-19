@@ -1,4 +1,4 @@
 prediction:[[0, 1, 1, 0, 1]]
 scoring:[0.3333333333333333]
 summarystats:[{'mean': {'0': {'Unnamed: 0': 6.1538461538, 'lastmonth_activity': 5625.9230769231, 'lastyear_activity': 763.5384615385, 'number_of_employees': 457.4615384615, 'exited': 0.5}}, 'median': {'0': {'Unnamed: 0': 6.0, 'lastmonth_activity': 425.0, 'lastyear_activity': 97.5, 'number_of_employees': 99.0, 'exited': 0.5}}, 'std': {'0': {'Unnamed: 0': 4.0761973229, 'lastmonth_activity': 19444.7746213178, 'lastyear_activity': 2016.609356931, 'number_of_employees': 800.6048328992, 'exited': 0.5099019514}}}]
-diagnostics:[[0.005913400000281399, 0.003717999999935273]]
+diagnostics:[[0.00609239999903366, 0.0035896000008506235]]
