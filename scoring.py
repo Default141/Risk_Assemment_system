@@ -28,14 +28,15 @@ def score_model():
     X = testdata[['lastmonth_activity','lastyear_activity','number_of_employees']].values.reshape(-1, 3)
     y = testdata['exited'].values.reshape(-1,1)
 
-    predicted=model.predict(X)
+    predicted = model.predict(X)
 
-    f1score=metrics.f1_score(predicted,y)
-    print(f1score)
+    f1score = metrics.f1_score(predicted,y)
     #it should write the result to the latestscore.txt file
     f = open("./" + model_path + "/" + "latestscore.txt", "a")
     f.write(str(f1score))
     f.close()
+    print(f1score)
+    return f1score
 
 if __name__ == '__main__':
     score_model()

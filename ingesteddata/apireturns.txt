@@ -1,0 +1,4 @@
+prediction:[[0, 1, 1, 1, 1]]
+scoring:[0.5714285714285715]
+summarystats:[{'mean': {'0': {'Unnamed: 0': 8.5277777778, 'lastmonth_activity': 169.3888888889, 'lastyear_activity': 1310.9722222222, 'number_of_employees': 29.5555555556, 'exited': 0.6111111111}}, 'median': {'0': {'Unnamed: 0': 8.5, 'lastmonth_activity': 73.0, 'lastyear_activity': 908.5, 'number_of_employees': 16.0, 'exited': 1.0}}, 'std': {'0': {'Unnamed: 0': 5.3102924919, 'lastmonth_activity': 293.0021236176, 'lastyear_activity': 1920.6580492278, 'number_of_employees': 33.1425013665, 'exited': 0.4944132325}}}]
+diagnostics:[[0.005477900000187219, 0.0037435000012919772]]
